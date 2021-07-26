@@ -3,6 +3,15 @@
 		<meta charset="UTF-8">
 	</head>
 	<body>
-		teste
+		<div th:each="book : ${books}">
+			<div>
+				<img th:src=${book} src=""/>
+			</div>
+			<div th:text="${book.title}">Book's title</div>
+			<div th:text="${book.description}">Description</div>
+			<div th:text="${book.publishednDate}">Publication's date</div>
+		
+		
+		</div>
 	</body>
 </html>

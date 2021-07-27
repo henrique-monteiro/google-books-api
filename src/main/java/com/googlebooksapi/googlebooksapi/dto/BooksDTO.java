@@ -49,7 +49,8 @@ public class BooksDTO {
 	
 	@Override
 	public String toString() {		
-		return "title: " + this.title + "\ndescription: " + this.description + "\nPublishedDate: " + this.publishedDate;
+		return "title: " + this.title + "\ndescription: " + this.description + 
+				"\nPublishedDate: " + this.publishedDate + "\nthumbnail: " + this.bookCoverImg;
 	}
 	
 }

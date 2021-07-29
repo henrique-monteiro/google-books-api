@@ -1,6 +1,8 @@
 package com.googlebooksapi.googlebooksapi.dto;
 
 public class BooksDTO {
+	private String id;
+	private String urlJson;
 	private String bookCoverImg;
 	private String title;
 	private String description;
@@ -21,7 +23,22 @@ public class BooksDTO {
 		this.publishedDate = publishedDate;
 	}
 	
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = "'" + id + "'";
+	}
 	
+	public String getUrlJson() {
+		return urlJson;
+	}
+
+	public void setUrlJson(String urlJson) {
+		this.urlJson = urlJson;
+	}
+
 	public String getBookCoverImg() {
 		return bookCoverImg;
 	}

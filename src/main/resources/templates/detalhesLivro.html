@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+
+		<div>
+			<img th:src=${book.bookCoverImg} src=""/>				
+		</div>
+		<div> Título: <span th:text="${book.title}">Book's title</span></div>
+		<div> Descrição: <span th:text="${book.description}">Description</span></div>
+		<div> Data da publicação: <span th:text="${book.publishedDate}">Publication's date</span></div>
+		
+		
+
+	</body>
+</html>

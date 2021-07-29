@@ -5,11 +5,17 @@
 	<body>
 		<div th:each="book : ${books}">
 			<div>
+<!-- 				<a th:href="@{/livros/detalhesLivro/{id}(id=${book.id})}"> -->
 				<img th:src=${book.bookCoverImg} src=""/>
+<!-- 				</a> -->
 			</div>
-			<div> Título: <span th:text="${book.title}">Book's title</span></div>
-			<div> Descrição: <span th:text="${book.description}">Description</span></div>
-			<div> Data da publicação: <span th:text="${book.publishedDate}">Publication's date</span></div>
+			<div> 
+				<a th:href="@{/livros/detalhesLivro/{id}(id=${book.id})}"> -->
+				Título: <span th:text="${book.title}">Book's title</span>
+				</a>	
+			</div>
+<!-- 			<div> Descrição: <span th:text="${book.description}">Description</span></div> -->
+<!-- 			<div> Data da publicação: <span th:text="${book.publishedDate}">Publication's date</span></div> -->
 		
 		
 		</div>

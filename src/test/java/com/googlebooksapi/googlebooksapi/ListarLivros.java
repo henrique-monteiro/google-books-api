@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 
 
-public class Teste {
+public class ListarLivros {
 	
 	@Test
 	public void testeParaAbrirONavegadorEIrParaAPaginaBuscaEsperarTresSegundosEFechar() throws InterruptedException {
@@ -24,7 +24,7 @@ public class Teste {
 		browser.findElement(By.id("buscaPorNome")).click();
 		Thread.sleep(3000);
 		
-		Assertions.assertTrue(browser.getCurrentUrl().equals("http://localhost:8080/livros/listaLivros?nomeLivro=Harry+Potter"));		
+		Assertions.assertTrue(browser.getCurrentUrl().equals("http://localhost:8080/lista?nomeLivro=Harry+Potter"));		
 		
 		Thread.sleep(3000);
 		

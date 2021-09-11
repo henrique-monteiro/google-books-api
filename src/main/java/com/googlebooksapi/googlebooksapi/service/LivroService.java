@@ -40,7 +40,12 @@ public class LivroService {
 		restTemplate = restTemplateBuilder.build();
 				
 		String body = restTemplate.getForEntity(url.toString(), String.class).getBody();
+
+		System.out.println(body.toString());
+		
 		JSONObject json = new JSONObject(body);
+		
+		System.out.println(json.toString());
 		return json;
 	}
 

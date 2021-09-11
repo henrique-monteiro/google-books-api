@@ -14,9 +14,18 @@ import com.googlebooksapi.googlebooksapi.dto.BooksDTO;
 public class LivroRepository {
 	
 	List<BooksDTO> books = new ArrayList<>();
+	JSONArray jsonItems = null;
 	
 	public List<BooksDTO> lista(JSONObject json){
-		JSONArray jsonItems = json.getJSONArray("items");		//cada item do array é um book						
+		try {
+			jsonItems = json.getJSONArray("items");		//cada item do array é um book
+		} catch(JSONException e) {		
+			System.out.println("\n");					//tratar essa exception
+			System.out.println(e.getMessage());
+			return null;
+		}
+		
+								
 		
 		List<JSONObject> itemsJson = new ArrayList<>();
 		for (int i=0; i<jsonItems.length(); i++) {	
@@ -82,7 +91,7 @@ public class LivroRepository {
 			one.setBookCoverImg(imageLinks.getString("smallThumbnail")); 
 			
 		} catch (JSONException e) {
-			one.setBookCoverImg("");				
+			one.setBookCoverImg("Nenhuma imagem disponível");				
 		}
 		
 	}

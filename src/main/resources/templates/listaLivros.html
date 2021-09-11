@@ -1,23 +1,30 @@
 <html>
-	<head>
-		<meta charset="UTF-8">
-	</head>
-	<body>
-		<div th:each="book : ${books}">
-			<div>
-<!-- 				<a th:href="@{/livros/detalhesLivro/{id}(id=${book.id})}"> -->
-				<img th:src=${book.bookCoverImg} src=""/>
-<!-- 				</a> -->
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div th:each="book : ${books}">
+		<div class="card" style="width: 20rem;">
+
+			<div class="card-body">
+				<img class="card-img-top" th:src=${book.bookCoverImg} src="" />
+				<div class="text-center">
+					<a th:href="@{/lista/{id}(id=${book.id})}"> -->
+						Título: <span th:text="${book.title}">Book's title</span>
+					</a>
+				</div>
 			</div>
-			<div> 
-				<a th:href="@{/livros/detalhesLivro/{id}(id=${book.id})}"> -->
-				Título: <span th:text="${book.title}">Book's title</span>
-				</a>	
-			</div>
-<!-- 			<div> Descrição: <span th:text="${book.description}">Description</span></div> -->
-<!-- 			<div> Data da publicação: <span th:text="${book.publishedDate}">Publication's date</span></div> -->
-		
-		
+
+
 		</div>
-	</body>
+
+
+
+
+	</div>
+</body>
 </html>

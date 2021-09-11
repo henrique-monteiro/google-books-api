@@ -1,17 +1,23 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	</head>
 	<body>
-
-		<div>
-			<img th:src=${book.bookCoverImg} src=""/>				
+		<div class="card mb-3 mt-1" style="max-width: 1000px;">
+			<div class="row g-0">
+    			<div class="col-md-2">					
+					<img class="img-fluid rounded-start" th:src=${book.bookCoverImg} src=""/>				
+					
+				</div>
+				
+				<div class="col-md-10">     					
+					<h5 class="card-title">Título: <span th:text="${book.title}">Book's title</span></h5>
+					<p class="card-text">Descrição: <span th:text="${book.description}">Description</span></p>
+					<p class="card-text">Data da publicação: <span th:text="${book.publishedDate}">Publication's date</span></p>					
+				</div>
+			</div>
 		</div>
-		<div> Título: <span th:text="${book.title}">Book's title</span></div>
-		<div> Descrição: <span th:text="${book.description}">Description</span></div>
-		<div> Data da publicação: <span th:text="${book.publishedDate}">Publication's date</span></div>
-		
-		
 
 	</body>
 </html>
